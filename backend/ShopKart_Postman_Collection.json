@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "shopkart-auth-service-collection",
+		"name": "ShopKart Customer Authentication Service",
+		"description": "Postman Collection for testing Register, Login, My Profile, and Logout endpoints.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Register Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fullName\": \"John Doe\",\n  \"email\": \"john@gmail.com\",\n  \"password\": \"john123\",\n  \"phone\": \"9876543210\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/customers/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"customers",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Login Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"john@gmail.com\",\n  \"password\": \"john123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/customers/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"customers",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Get My Profile (Protected)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/customers/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"customers",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Logout Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/customers/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"customers",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
