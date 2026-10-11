@@ -1,0 +1,25 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/customers/:path*",
+      "destination": "https://lab-project-chi.vercel.app/customers/:path*"
+    },
+    {
+      "source": "/products/:path*",
+      "destination": "https://lab-project-chi.vercel.app/products/:path*"
+    },
+    {
+      "source": "/wishlist/:path*",
+      "destination": "https://lab-project-chi.vercel.app/wishlist/:path*"
+    },
+    {
+      "source": "/cart/:path*",
+      "destination": "https://lab-project-chi.vercel.app/cart/:path*"
+    },
+    {
+      "source": "/orders/:path*",
+      "destination": "https://lab-project-chi.vercel.app/orders/:path*"
+    }
+  ]
+}
